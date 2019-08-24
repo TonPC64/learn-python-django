@@ -60,3 +60,7 @@ and install Pillow
 ```sh
 pipenv install Pillow
 ```
+
+
+css
+https://github.com/parnpresso/django-workshop
