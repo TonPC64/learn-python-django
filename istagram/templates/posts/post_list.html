@@ -1,0 +1,9 @@
+<h1>Posts</h1>
+
+<ul>
+    {% for post in object_list %}
+        <h2>Text: {{post.text}}</h2>
+        <h2>User: {{post.user}}</h2>
+        <h2>Image: <img src="{{post.image.url}}"/></h2>
+    {% endfor %}
+</ul>
