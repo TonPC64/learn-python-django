@@ -37,3 +37,26 @@ add folder templates
 update views.py
 
 using auth from `https://docs.djangoproject.com/en/2.2/topics/auth/default/#module-django.contrib.auth.views`
+
+## add posts page
+
+```sh
+django-admin startapp posts
+```
+
+update models in post `posts/models.py`
+
+```py
+class Post(models.Model):
+    text = models.TextField(null=False, blank=False)
+    image = models.ImageField(upload_to='posts', null=False, blank=False)
+    user = models.ForeignKey('auth.User', null=False, blank=False, on_delete=models.CASCADE)
+    created = models.TimeField(auto_now=True)
+```
+
+add posts to project via `settings.py` in install_app
+and install Pillow
+
+```sh
+pipenv install Pillow
+```
