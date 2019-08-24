@@ -30,9 +30,10 @@
     <!-- Profile -->
 
     <div class="posts">
+    {% for post in object.post_set.all %}
     <div class="post">
         <a href="#">
-        <img src="assets/images/parn.jpg" />
+        <img src="{{post.image.url}}" />
         <div class="overlay">
             <div class="information">
             <span>
@@ -45,51 +46,7 @@
         </div>
         </a>
     </div>
-    <div class="post">
-        <a href="#">
-        <img src="assets/images/parn.jpg" />
-        <div class="overlay">
-            <div class="information">
-            <span>
-                <i class="fas fa-heart fa-lg"></i>23
-            </span>
-            <span>
-                <i class="fas fa-comment fa-lg"></i>7
-            </span>
-            </div>
-        </div>
-        </a>
-    </div>
-    <div class="post">
-        <a href="#">
-        <img src="assets/images/parn.jpg" />
-        <div class="overlay">
-            <div class="information">
-            <span>
-                <i class="fas fa-heart fa-lg"></i>23
-            </span>
-            <span>
-                <i class="fas fa-comment fa-lg"></i>7
-            </span>
-            </div>
-        </div>
-        </a>
-    </div>
-    <div class="post">
-        <a href="#">
-        <img src="assets/images/parn.jpg" />
-        <div class="overlay">
-            <div class="information">
-            <span>
-                <i class="fas fa-heart fa-lg"></i>23
-            </span>
-            <span>
-                <i class="fas fa-comment fa-lg"></i>7
-            </span>
-            </div>
-        </div>
-        </a>
-    </div>
+    {% endfor %}
     </div>
 </main>
 {% endblock content %}
