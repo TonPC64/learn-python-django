@@ -1,9 +1,9 @@
 <div>
-    {{user.is_authenticated}}
-    <div>{{user.username}}</div>
+    <b>Hi {{user.username}}</b>
 </div>
 <div class="content">
-    Home
+    <a href="{% url 'home' %}">Home</a>
+    <a href="{% url 'admin:index' %}">Admin</a>
     {% block content %}
     {% endblock content %}
 </div>

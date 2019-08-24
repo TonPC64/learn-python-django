@@ -1,9 +1,9 @@
 <h1>Posts</h1>
-
+<a href="{% url 'new_post' %}">New Post</a>
 <ul>
     {% for post in object_list %}
         <h2>Text: {{post.text}}</h2>
         <h2>User: {{post.user}}</h2>
-        <h2>Image: <img src="{{post.image.url}}"/></h2>
+        <h2>Image: <img width="500" src="{{post.image.url}}"/></h2>
     {% endfor %}
 </ul>
