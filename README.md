@@ -33,3 +33,7 @@ def home(request):
 ```
 
 set template in `settings.py`
+add folder templates
+update views.py
+
+using auth from `https://docs.djangoproject.com/en/2.2/topics/auth/default/#module-django.contrib.auth.views`
