@@ -1,4 +1,6 @@
 from django.shortcuts import render
 
 def home(request):
-    return render(request, "base.html")
+    data = {"greeting": "สวัสดี"}
+    data["price"] = 3000
+    return render(request, "home.html", data)

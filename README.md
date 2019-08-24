@@ -31,3 +31,5 @@ from django.http import HttpResponse
 def home(request):
     return HttpResponse("My homepage <3")
 ```
+
+set template in `settings.py`

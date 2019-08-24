@@ -1,7 +1,9 @@
 <div>
     {{user.is_authenticated}}
-    {{user.username}}
+    <div>{{user.username}}</div>
 </div>
 <div class="content">
     Home
+    {% block content %}
+    {% endblock content %}
 </div>
