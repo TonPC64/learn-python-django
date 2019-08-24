@@ -1,3 +1,12 @@
-from django.shortcuts import render
+from django.views.generic.edit import CreateView
 
-# Create your views here.
+from .models import Post
+
+class CreatePostView(CreateView):
+    model = Post
+    fields = ['text', 'image']
+    success_url = '/'
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)
